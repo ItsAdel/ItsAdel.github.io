@@ -1,67 +1,19 @@
 ---
-layout: page
-title: Airspace
-permalink: /
+layout: main
 ---
+{% for post in paginator.posts %}
+<article class="post">
+  {% if post.img %}
+    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
+  {% else %}
+  {% endif %}
+  <div class="post-content">
+    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+  </div>
+</article>
+{% endfor %}
 
-<!-- Slider Start -->
-<section id="slider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-2">
-        <div class="block">
-          <h1 class="animated fadeInUp">Hey, its Adel <br> &#38;</h1>
-          <p class="animated fadeInUp">I am a Creator and Tech Enthusiast</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Wrapper Start -->
-<section id="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <div class="block">
-          <div class="section-title">
-            <h2>About Me</h2>
-            <p>I am currently in Vancouver, BC studying computer science and statistics at UBC. I am an avid coffee drinker and love to go on hikes. I have a passion for photography and art which keeps me occupied when I am not busy coding.</p>
-          </div>
-        </div>
-      </div><!-- .col-md-7 close -->
-      <div class="col-md-5 col-sm-12">
-        <div class="block">
-          <img src="img/wrapper-img.png" alt="Img">
-        </div>
-      </div><!-- .col-md-5 close -->
-    </div>
-  </div>
-</section>
-
-<section id="feature">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-6">
-      <h2>Creation over Consumption</h2>
-      <p>We live at such a time where we are constantly consuming things.</p>
-      <p>By simply focusing on creating new things constantly, you actually make something meaningful</p>
-      <p>I am stating that here as a reminder to myself everytime I get distracted.</p>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- Call to action Start -->
-<section id="call-to-action">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h2>Get an insight to my brain</h2>
-          <p>Read more about the things I get upto.</p>
-          <a class="btn btn-default btn-call-to-action" href="/blog" >Let me read his mind</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include pagination.html %}

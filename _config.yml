@@ -1,37 +1,35 @@
+title: Hello, world! Adel Akbar
+description: > # this means to ignore newlines until "baseurl:"
+  I code, play games, trade and a bunch more. This blog is to document all the crazy that I get upto and just thoughts in general.
+permalink: ':title/'
+baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
+# Author Settings
+author: Adel Akbar # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: I code, play games, trade and a bunch more. # add description
+social-twitter: adelakbarhere # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: itsAdel # add your Github handle
+social-linkedin: adel.akbar # add your Linkedin handle
+social-email: adelakbarhere@gmail.com # add your Email address
 
-keep_files:
-  - "CNAME"
-  - ".git"
-  - ".gitignore"
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
 
+# Tracker
+analytics: # Google Analytics
 
-# Site settings
-title: ItsAdel
-subtitle: "Story of my life"
-url: "http://itsadel.github.io" # the base hostname & protocol for your site
-# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: ""
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
-
-# Build settings
+# Build Settings
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+paginate: 8
+paginate_path: "/page/:num"
 
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
-
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
