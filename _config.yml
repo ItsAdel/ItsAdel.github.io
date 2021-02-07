@@ -8,7 +8,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Adel Akbar # add your name
-author-img: david-freeman.jpg # add your photo
+author-img: adel-akbar.jpg # add your photo
 about-author: I code, play games, trade and a bunch more. # add description
 social-twitter: adelakbarhere # add your Twitter handle
 social-facebook: # add your Facebook handle
@@ -17,10 +17,10 @@ social-linkedin: adel.akbar # add your Linkedin handle
 social-email: adelakbarhere@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: adel_akbar # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: G-PHRCSVCNQK
 
 # Build Settings
 markdown: kramdown
