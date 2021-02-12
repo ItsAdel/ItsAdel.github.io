@@ -6,19 +6,19 @@ description: Summary and highlights of things I thought were useful for salary n
 img:  # Add image post (optional)
 ---
 
-This article is mainly targeted towards people starting grad or full time jobs in the tech industry as Developers, Software Engineers etc. These are a list of things you should definitely know before accepting a job offer.
+This article is mainly targeted towards people starting new grad or full time jobs in the tech industry as Developers, Software Engineers etc. These are a list of things you should definitely know before accepting a job offer.
 
 ### Pay attention to total compensation and not just base salary alone
 
-They will have different companies such as base salary, bonuses and equity etc. Make sure to ask questions about your compensation. This will give you a overall better understanding of what to expect as the compensation breakdown varies company to company.
+Companies have different compensation breakdowns such as base salary, bonuses and equity etc. Make sure to ask questions about your compensation. This will give you a overall better understanding of what to expect as the compensation breakdown varies company to company.
 
 ### Should you renegotiate your salary?
 
-100%, yes. Recruiters are given a range when making offers and the difference in what you are starting with could be anymore from 20-100k. Recruiters will also try to start you out at the minimum number or the minimum to mid range. No one automatically gives you the max and they wait for you to ask.
+100%, yes. Recruiters are given a range when making offers and the difference in what you are starting with could be anywhere from 20-100k. Recruiters will also try to start you out at the minimum number or the minimum to mid range. No one automatically gives you the max and they wait for you to ask.
 
 ### Don't worry about risking your job when renegotiating
 
-This is something a lot of new grads suffer from. They worry that their performance at their job will not be sufficient to justify higher pay or it might look bad asking for a higher salary for their first job. In reality, companies have budgets allocated for hiring new developers and there is always a range. Higher compensation does not affect what is expected from you for a specific role. Finding good talent is really hard and that is why there are a lot of technical recruiters. Developers are very valuable and companies need you to function. Renegotiating for better compensation will not hurt your relationship with your manager.
+This is something a lot of new grads suffer from. They worry that their performance at their job will not be sufficient to justify higher pay or it might look bad asking for a higher salary for their first job. In reality, companies have budgets allocated for hiring new developers and there is always a range. Higher compensation does not affect what is expected from you for a specific role. Finding good talent is really hard and that is why there are a lot of technical recruiters. Developers are valuable and companies need you to function. Renegotiating for better compensation will not hurt your relationship with your manager.
 
 ### How to justify a higher salary
 
@@ -43,6 +43,8 @@ Give a reasonable range. You don't want to shoot it so high because it signals t
 ### Setup an info chat and don't be afraid to ask for extensions
 
 Don't be afraid to stall the process a bit. Feel free to use phrases like "This is a big decision to make? Could we set up a meeting to just go over everything outlined in this compensation package sometime next week?" etc. You want to give yourself the time to negotiate the offer incase companies try to put tight deadlines on offer acceptances. So never back down from asking for more time when it comes to making such big decisions.
+
+Finally, I wish all of you the best of luck and hope you land your dream job!
 
 ### References
 
