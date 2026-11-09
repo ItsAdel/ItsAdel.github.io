@@ -1,0 +1,9 @@
+# Projects I built but no longer maintain. Shown in the homepage "Archive" section.
+- name: UBC UGME Anesthesiology App
+  years: 2024 — 2025
+  icon: projects/ubc-anesthesia.jpg
+  summary: An anesthesiology education app for UBC medical students. I built it and shipped it to the App Store; it's in real students' hands, and the faculty now run it themselves.
+  status: Handed off to UBC
+  stack: [React Native, Expo]
+  link: https://apps.apple.com/ca/app/ubc-ugme-anesthesiology-app/id6745199370
+  link_label: App Store

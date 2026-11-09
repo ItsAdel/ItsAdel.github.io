@@ -1,4 +1,5 @@
 ---
+published: false # hidden for now; delete this line to bring it back
 layout: post
 title: "Starting random things 2 hours after waking up"
 date: 2021-02-10 13:32:20 +0300

@@ -1,19 +1,195 @@
 ---
 layout: main
 ---
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+{% unless paginator.page > 1 %}
+<section class="hero">
+  <div class="hero-avatar reveal">
+    <div class="avatar-ring"></div>
+    <img src="{{ site.baseurl }}/assets/img/{{ site.author-img }}" alt="{{ site.author }}" width="112" height="112">
+    <span class="status-dot" title="Currently building things"></span>
   </div>
-</article>
-{% endfor %}
 
-{% include pagination.html %}
+  <p class="eyebrow reveal"><span class="wave">👋</span> Hello, world!</p>
+  <h1 class="hero-title split">I'm Adel Akbar. I build <em>the future of finance onchain</em> by day and small, friendly apps by night.</h1>
+
+  <p class="hero-sub reveal">
+    I <span class="typer" data-words="ship smart contracts.|hack at ETHGlobal.|go omnichain.|build apps.|make dawg 🐾"></span><span class="caret" aria-hidden="true"></span>
+  </p>
+
+  <div class="hero-actions reveal">
+    <a class="btn btn-primary" href="{{ site.baseurl }}/dawg/">
+      Meet dawg
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    {% include social.html %}
+  </div>
+</section>
+
+<div class="marquee reveal" aria-hidden="true">
+  <div class="marquee-track">
+    {% for i in (1..2) %}
+    <span>Smart contracts</span><i>✦</i><span>Cross-chain</span><i>✦</i><span>Hackathons</span><i>✦</i><span>Solidity</span><i>✦</i><span>Indie apps</span><i>✦</i><span>Building in public</span><i>✦</i>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="reveal">
+<a class="feature-card tilt" href="{{ site.baseurl }}/dawg/">
+  <img class="feature-icon" src="{{ site.baseurl }}/dawg/dawg-icon.png" alt="" width="72" height="72">
+  <div>
+    <span class="chip">Now building</span>
+    <h2>dawg — a cute workout logger</h2>
+    <p>A friendly gym buddy with a puppy who cheers on your PRs. Coming soon to the App Store.</p>
+  </div>
+  <span class="feature-arrow" aria-hidden="true">→</span>
+</a>
+</div>
+
+<section id="work" class="work">
+  <div class="section-head reveal">
+    <h2>Work</h2>
+    <span class="count">Since 2017</span>
+  </div>
+
+  <ol class="timeline">
+    {% for job in site.data.work.featured %}
+    <li class="job reveal{% if job.current %} is-current{% endif %}">
+      <span class="job-dot" aria-hidden="true"></span>
+      <div class="job-head">
+        <div>
+          <h3>{{ job.company }}</h3>
+          <p class="job-role">{{ job.role }}</p>
+        </div>
+        <span class="job-dates">{% if job.current %}<span class="now">Now</span>{% endif %}{{ job.dates }}</span>
+      </div>
+      {% if job.summary %}<p class="job-summary">{{ job.summary }}</p>{% endif %}
+      {% if job.stack %}
+      <ul class="job-stack">
+        {% for s in job.stack %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+
+  <details class="earlier reveal">
+    <summary>
+      <span>Earlier roles</span>
+      <span class="earlier-count">{{ site.data.work.earlier | size }}</span>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </summary>
+    <ul>
+      {% for job in site.data.work.earlier %}
+      <li><span class="earlier-company">{{ job.company }}</span><span class="earlier-role">{{ job.role }}</span><span class="earlier-year">{{ job.year }}</span></li>
+      {% endfor %}
+    </ul>
+  </details>
+
+  <a class="linkedin-cta reveal" href="https://www.linkedin.com/in/{{ site.social-linkedin }}" target="_blank" rel="noopener">
+    <span>Full experience on LinkedIn</span>
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+  </a>
+</section>
+
+{% assign hk = site.data.hackathons %}
+<section id="hackathons" class="hackathons">
+  <div class="section-head reveal">
+    <h2>Hackathons</h2>
+    <span class="count">{{ hk.events | size }} cities · 4 continents</span>
+  </div>
+  <p class="section-lede reveal">Web3 is where I've specialized: building at hackathons, judging them, and breaking contracts in security CTFs.</p>
+
+  <ul class="honors reveal">
+    <li><span>🏆</span> Top 10 · ETHGlobal San Francisco</li>
+    <li><span>🛡️</span> Top 5 · Web3 security CTF</li>
+    <li><span>⚖️</span> Judge · ETHGlobal Prague</li>
+  </ul>
+
+  <div class="globe-wrap reveal">
+    <canvas class="globe" aria-label="Globe showing hackathons in {% for e in hk.events %}{{ e.city }}{% unless forloop.last %}, {% endunless %}{% endfor %}, from {{ hk.home.city }}" role="img"
+      data-home='{"city":"{{ hk.home.city }}","lat":{{ hk.home.lat }},"lng":{{ hk.home.lng }}}'
+      data-cities='[{% for e in hk.events %}{"city":"{{ e.city }}","lat":{{ e.lat }},"lng":{{ e.lng }}}{% unless forloop.last %},{% endunless %}{% endfor %}]'></canvas>
+    <div class="globe-label" aria-hidden="true"><span class="globe-city"></span><span class="globe-event"></span></div>
+    <p class="globe-hint" aria-hidden="true">Drag to spin</p>
+  </div>
+
+  <ol class="hack-list">
+    {% for e in hk.events %}
+    <li class="hack reveal spotlight" data-index="{{ forloop.index0 }}" tabindex="0" data-event="{{ e.event }}">
+      <div class="hack-head">
+        <span class="hack-place"><span class="hack-pin" aria-hidden="true"></span>{{ e.city }}, {{ e.country }}</span>
+        <span class="hack-date">{{ e.date }}</span>
+      </div>
+      <h3>{% if e.project %}{{ e.project }} <span class="hack-at">at {{ e.event }}</span>{% else %}{{ e.role }} <span class="hack-at">at {{ e.event }}</span>{% endif %}</h3>
+      <p>{{ e.summary }}</p>
+      <div class="hack-foot">
+        {% for b in e.badges %}<span class="badge">{{ b }}</span>{% endfor %}
+        {% for s in e.stack %}<span class="stack">{{ s }}</span>{% endfor %}
+        {% if e.link %}<a class="hack-link" href="{{ e.link }}" target="_blank" rel="noopener">Code ↗</a>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section id="archive" class="archive">
+  <div class="section-head reveal">
+    <h2>Archive</h2>
+    <span class="count">No longer maintained</span>
+  </div>
+  <ul class="archive-list">
+    {% for p in site.data.archive %}
+    <li class="archive-item reveal">
+      {% if p.icon %}<img class="archive-icon" src="{{ site.baseurl }}/assets/img/{{ p.icon }}" alt="" width="56" height="56" loading="lazy">{% endif %}
+      <div class="archive-body">
+        <div class="archive-head">
+          <h3>{{ p.name }}</h3>
+          <span class="hack-date">{{ p.years }}</span>
+        </div>
+        <p>{{ p.summary }}</p>
+        <div class="hack-foot">
+          {% if p.status %}<span class="badge badge-muted">{{ p.status }}</span>{% endif %}
+          {% for s in p.stack %}<span class="stack">{{ s }}</span>{% endfor %}
+          {% if p.link %}<a class="hack-link" href="{{ p.link }}" target="_blank" rel="noopener">{{ p.link_label | default: 'Code' }} ↗</a>{% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endunless %}
+
+{% if site.posts.size > 0 %}
+<section id="writing" class="writing">
+  <div class="section-head reveal">
+    <h2>Writing</h2>
+    <span class="count">{{ site.posts | size }} posts</span>
+  </div>
+
+  <ol class="post-list">
+    {% for post in paginator.posts %}
+    {% assign words = post.content | number_of_words %}
+    {% assign n = paginator.page | minus: 1 | times: paginator.per_page | plus: forloop.index %}
+    <li class="post-item reveal">
+      <a class="post-card spotlight" href="{{ post.url | prepend: site.baseurl }}">
+        <span class="post-index">{% if n < 10 %}0{% endif %}{{ n }}</span>
+        <div class="post-body">
+          <h3 class="post-title" style="view-transition-name: post-{{ post.slug }}">{{ post.title }}</h3>
+          <p class="post-excerpt">{{ post.content | strip_html | truncatewords: 24 }}</p>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
+            <span>·</span>
+            <span>{{ words | divided_by: 200 | plus: 1 }} min read</span>
+          </div>
+        </div>
+        <span class="post-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% include pagination.html %}
+</section>
+{% endif %}

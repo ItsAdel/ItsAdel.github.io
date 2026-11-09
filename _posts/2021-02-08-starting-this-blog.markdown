@@ -1,4 +1,5 @@
 ---
+published: false # hidden for now; delete this line to bring it back
 layout: post
 title: "Starting this blog"
 date: 2021-02-08 13:32:20 +0300

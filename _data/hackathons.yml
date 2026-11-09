@@ -1,0 +1,55 @@
+# Shown on the homepage globe + list. Newest first.
+# lat/lng place the city on the globe; arcs are drawn from `home`.
+home:
+  city: Vancouver
+  lat: 49.2827
+  lng: -123.1207
+
+events:
+  - event: ETHGlobal Buenos Aires
+    city: Buenos Aires
+    country: Argentina
+    date: Nov 2025
+    lat: -34.6037
+    lng: -58.3816
+    project: Aetheria
+    link: https://github.com/ItsAdel/eth-buenosaires
+    summary: An omnichain game on LayerZero V2. Send your NFT to battle on another chain, earn rewards back cross-chain, and trade resources on a cross-chain marketplace.
+    stack: [LayerZero V2, Solidity, Foundry]
+    badges:
+      - Top 5 · Web3 security CTF
+
+  - event: ETHGlobal Prague
+    city: Prague
+    country: Czechia
+    date: 2025
+    lat: 50.0755
+    lng: 14.4378
+    role: Judge for LayerZero
+    summary: Judged LayerZero's prize track, reviewing teams' cross-chain builds.
+    badges:
+      - Judge · LayerZero
+
+  - event: ETHGlobal Bangkok
+    city: Bangkok
+    country: Thailand
+    date: Nov 2024
+    lat: 13.7563
+    lng: 100.5018
+    project: Votr
+    link: https://github.com/lamtrinh259/ETHGlobal_Bangkok_2024
+    summary: AI voting delegates that learn your values and vote on DAO proposals for you. Contracts deployed on Polygon, Base, Flow and Bitkub.
+    stack: [AI agents, Solidity, DAO governance]
+
+  - event: ETHGlobal San Francisco
+    city: San Francisco
+    country: USA
+    date: Oct 2024
+    lat: 37.7749
+    lng: -122.4194
+    project: Betsy
+    link: https://github.com/ItsAdel/betsy
+    summary: Sports betting in a group chat. An LLM turns plain-English bets into on-chain wagers on SKALE, settled automatically with live NBA results.
+    stack: [XMTP, SKALE, Coinbase SDK, LLMs]
+    badges:
+      - Led the team to the top 10

@@ -1,38 +1,64 @@
 ---
 layout: main
 ---
-<article class="article-page">
-  <div class="page-content">
-    {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-        {% if page.fig-caption %}
-          <figcaption>{{page.fig-caption}}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
-    {% else %}
+{% assign words = content | number_of_words %}
+<article class="article">
+  <a class="back-link" href="{{ site.baseurl }}/#writing">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    All posts
+  </a>
+
+  <header class="article-header">
+    <div class="article-meta reveal">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      <span>·</span>
+      <span>{{ words | divided_by: 200 | plus: 1 }} min read</span>
+    </div>
+    <h1 class="article-title" style="view-transition-name: post-{{ page.slug }}">{{ page.title }}</h1>
+    {% if page.description %}<p class="article-lede reveal">{{ page.description }}</p>{% endif %}
+  </header>
+
+  {% if page.img %}
+  <figure class="article-cover reveal">
+    <img src="{{ "/assets/img/" | prepend: site.baseurl | append: page.img }}" alt="{{ page.title }}">
+    {% if page.fig-caption %}<figcaption>{{ page.fig-caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+  <div class="prose reveal">
+    {{ content }}
+  </div>
+
+  <footer class="article-footer">
+    {% if page.tags.size > 0 %}
+    <div class="article-tags">
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
     {% endif %}
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
-      {{content | markdownify}}
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
-        </div>
-        <div class="page-tag">
-          {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
-      </div>
-      {% include disqus.html %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+    <div class="share">
+      <span>Share</span>
+      <a href="https://x.com/intent/post?text={{ page.title | cgi_escape }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener nofollow">X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener nofollow">LinkedIn</a>
+      <button type="button" class="copy-link" data-url="{{ site.url }}{{ page.url }}">Copy link</button>
+    </div>
+  </footer>
+
+  <nav class="post-nav">
+    {% if page.previous %}
+    <a class="post-nav-link spotlight" href="{{ page.previous.url | prepend: site.baseurl }}">
+      <span class="label">← Previous</span>
+      <span class="title">{{ page.previous.title }}</span>
+    </a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+    <a class="post-nav-link next spotlight" href="{{ page.next.url | prepend: site.baseurl }}">
+      <span class="label">Next →</span>
+      <span class="title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+
+  {% include disqus.html %}
+</article>

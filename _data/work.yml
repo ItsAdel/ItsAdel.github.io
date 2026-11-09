@@ -1,0 +1,57 @@
+# Shown on the homepage. `featured` roles get a full row; `earlier` roles show as a compact list.
+# The full history lives on LinkedIn (site.social-linkedin).
+featured:
+  - company: Ondo Finance
+    role: Smart Contract Integration Engineer
+    dates: 2026 — Present
+    current: true
+
+  - company: LayerZero Labs
+    role: Integration Engineer
+    dates: 2025
+    summary: Led end-to-end integrations for top partners, architecting and deploying custom OFT/OApp contracts across Ethereum, Solana and Move VMs.
+    stack: [Solidity, Rust, Move, TypeScript, Foundry]
+
+  - company: Sublime Ventures
+    role: Senior Software Engineer
+    dates: 2023 — 2024
+    summary: Built a web3 venture-capital SaaS platform end to end, from Diamond-standard Solidity contracts for investor payouts to the AWS CI/CD pipeline.
+    stack: [Next.js, Node.js, PostgreSQL, Solidity, AWS]
+
+  - company: GlidingGrowth
+    role: Founder
+    dates: 2023
+    summary: Took an AI-powered outreach startup from concept to production, pitching investors and running customer discovery along the way.
+    stack: [Next.js, Prisma, OpenAI, Stripe]
+
+  - company: Amazon Web Services
+    role: Software Development Engineer
+    dates: 2022 — 2023
+    summary: Built cluster monitoring for AWS Snowball that automated Cassandra repairs, and backend APIs for EC2 Auto Scaling Groups. Mentored new hires and interns.
+    stack: [Java, React, Cassandra, Linux]
+
+earlier:
+  - company: Amazon Web Services
+    role: SDE Intern
+    year: 2020
+  - company: Peloton Technologies
+    role: Software Engineer Intern
+    year: 2020
+  - company: nwPlus
+    role: External Dev Coordinator
+    year: 2020
+  - company: UBC Psychology
+    role: Web Application Developer
+    year: 2020
+  - company: UBC Launch Pad
+    role: Developer
+    year: 2019
+  - company: Visier
+    role: Software Developer Co-op
+    year: 2019
+  - company: University of British Columbia
+    role: Teaching Assistant, Sports Analyst
+    year: 2018
+  - company: Alpha Digital Solutions
+    role: Web Designer
+    year: 2017

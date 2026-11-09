@@ -3,31 +3,265 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>dawg · a cute workout logger</title>
-<meta name="description" content="dawg is a friendly workout logger with a puppy who cheers on your PRs.">
-<link rel="icon" href="/dawg/dawg-icon.png">
+<title>dawg · gym tracker & companion</title>
+<meta name="description" content="dawg is a simple, friendly workout log with a puppy who's always happy to see you at the gym. Log sets in seconds, celebrate every PR, works offline.">
+<meta property="og:title" content="dawg · Workout log with a loyal pup">
+<meta property="og:description" content="Log every set in seconds, celebrate every PR, and keep your pup happy. Built for the gym: fast, friendly and works with no signal.">
+<meta property="og:image" content="https://itsadel.com/dawg/og.jpg">
+<meta property="og:url" content="https://itsadel.com/dawg/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF7F2">
+<link rel="icon" href="/dawg/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/dawg/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/dawg/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/dawg/dawg.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/dawg/"><img src="/dawg/dawg-icon.png" alt=""><span>dawg</span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pup">Your pup</a>
+      <a href="#membership">Membership</a>
+      <a class="keep" href="/dawg/support/">Support</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<a class="brand" href="/dawg/"><img src="/dawg/dawg-icon.png" alt=""><span>dawg</span></a>
-<span class="pill">🐾 Coming soon to the App Store</span>
-<h1>Your gym buddy, with a wagging tail.</h1>
-<p class="muted">dawg is a simple, friendly workout logger. Log every set, watch your lifts climb, and let your puppy cheer on every personal record.</p>
-<div class="card">
-<ul>
-<li><strong>Fast logging</strong>: sets, reps, weights, rest timer on your Lock Screen and Dynamic Island.</li>
-<li><strong>Progress you can feel</strong>: personal records, lift trends and a muscle map of your week.</li>
-<li><strong>Free and private</strong>: use it fully offline, nothing leaves your phone.</li>
-<li><strong>Founding Dawg membership</strong>: sync and back up across devices, for every app in the family.</li>
-</ul>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot"></span> Coming soon to the App Store</span>
+      <h1>Your gym buddy, with a <span class="mark">wagging tail.</span></h1>
+      <p class="lede">dawg is a simple, friendly workout log. Log every set in seconds, watch your lifts climb, and let your puppy cheer on every personal record.</p>
+      <div class="cta-row">
+        <span class="btn btn-dark" aria-disabled="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          <span><small>Coming soon on</small>iPhone</span>
+        </span>
+        <a class="btn btn-soft" href="#features">See how it works ↓</a>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+
+      <div class="pup hero-pup" data-mood="happy" data-wave title="Pet me!"></div>
+
+      <div class="phone">
+        <div class="screen"><img src="/dawg/screens/progress-overview.jpg" alt="dawg's Progress screen: new PRs this week, a training calendar and recent records" width="600" height="1303"></div>
+      </div>
+
+      <div class="float-card card-pr">
+        <span class="icon">🏆</span>
+        <div><strong>New PR! 476 lb</strong><span>Leg Press · est. 1RM</span></div>
+      </div>
+      <div class="float-card card-rest">
+        <span class="icon">⏱️</span>
+        <div><span>Rest</span><div class="time">1:58</div></div>
+      </div>
+      <div class="float-card card-streak">
+        <span class="icon">🔥</span>
+        <div><strong>9 week streak</strong><span>Weekly goal reached</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>🏋️ Fast set logging</span><span>⏱️ Auto rest timer</span><span>🏆 PR celebrations</span><span>🗺️ Muscle map</span>
+    <span>📈 Lift charts</span><span>📴 Works offline</span><span>🧮 Plate calculator</span><span>📤 CSV export</span>
+    <span>🏋️ Fast set logging</span><span>⏱️ Auto rest timer</span><span>🏆 PR celebrations</span><span>🗺️ Muscle map</span>
+    <span>📈 Lift charts</span><span>📴 Works offline</span><span>🧮 Plate calculator</span><span>📤 CSV export</span>
+  </div>
 </div>
-<nav class="links">
-<a href="/dawg/">About dawg</a>
-<a href="/dawg/privacy/">Privacy policy</a>
-<a href="/dawg/support/">Support</a>
-<span class="muted">© 2026 Adel Akbar</span>
-</nav>
+
+<section class="section tour" id="features">
+  <div class="wrap">
+    <div class="steps">
+      <div class="tour-intro reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>Built for the gym floor, not the couch.</h2>
+      </div>
+
+      <article class="step">
+        <span class="step-num">1</span>
+        <h3>Log sets in seconds</h3>
+        <p>Tap through your sets with last time's weights and reps right beside you. Start from a template or build the workout as you go.</p>
+        <ul>
+          <li>Swap or reorder exercises mid-workout</li>
+          <li>Find anything fast, even “ohp” or “tris”</li>
+          <li>Create your own exercises</li>
+        </ul>
+        <div class="phone"><div class="screen"><img src="/dawg/screens/mid-workout.jpg" alt="Logging sets mid-workout" loading="lazy" width="600" height="1303"></div></div>
+      </article>
+
+      <article class="step">
+        <span class="step-num">2</span>
+        <h3>A rest timer that runs itself</h3>
+        <p>Finish a set and the countdown starts on its own. Glance at your Lock Screen or Dynamic Island and you know exactly when to go again.</p>
+        <ul>
+          <li>Live on the Lock Screen and Dynamic Island</li>
+          <li>Add or skip time with one tap</li>
+        </ul>
+        <div class="phone"><div class="screen"><img src="/dawg/screens/rest-timer.jpg" alt="The rest timer counting down" loading="lazy" width="600" height="1303"></div></div>
+      </article>
+
+      <article class="step">
+        <span class="step-num">3</span>
+        <h3>Watch your lifts climb</h3>
+        <p>Charts for every lift, so you can see the progress you can feel. Every personal record gets celebrated the moment you hit it.</p>
+        <ul>
+          <li>Estimated 1RM, heaviest weight and best volume</li>
+          <li>Weekly goals and streaks</li>
+        </ul>
+        <div class="phone"><div class="screen"><img src="/dawg/screens/progress-charts.jpg" alt="Progress charts for a lift" loading="lazy" width="600" height="1303"></div></div>
+      </article>
+
+      <article class="step">
+        <span class="step-num">4</span>
+        <h3>Know what you've trained</h3>
+        <p>A muscle map of your week shows what's worked and what's been skipped, so leg day can't hide from you.</p>
+        <ul>
+          <li>Sets per muscle, week by week</li>
+          <li>Your full history, one tap away</li>
+        </ul>
+        <div class="phone"><div class="screen"><img src="/dawg/screens/history-muscle-overview.jpg" alt="Muscle map of the week" loading="lazy" width="600" height="1303"></div></div>
+      </article>
+
+      <article class="step">
+        <span class="step-num">5</span>
+        <h3>Your pup is always proud</h3>
+        <p>Finish a workout and get a recap of everything you did, plus one very happy puppy. Paw prints fill up as you hit your weekly goal.</p>
+        <ul>
+          <li>Duration, volume and sets at a glance</li>
+          <li>Confetti when you earn it</li>
+        </ul>
+        <div class="phone"><div class="screen"><img src="/dawg/screens/finish-workout.jpg" alt="Workout complete screen with the puppy" loading="lazy" width="600" height="1303"></div></div>
+      </article>
+    </div>
+
+    <div class="tour-phone" aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <img src="/dawg/screens/mid-workout.jpg" alt="" width="600" height="1303">
+          <img src="/dawg/screens/rest-timer.jpg" alt="" width="600" height="1303">
+          <img src="/dawg/screens/progress-charts.jpg" alt="" width="600" height="1303">
+          <img src="/dawg/screens/history-muscle-overview.jpg" alt="" width="600" height="1303">
+          <img src="/dawg/screens/finish-workout.jpg" alt="" width="600" height="1303">
+        </div>
+      </div>
+      <div class="tour-dots"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="section pups" id="pup">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Meet your pup</span>
+      <h2>A buddy who notices.</h2>
+      <p>Your puppy reacts to how training's going. Tap one to say hi.</p>
+    </div>
+    <div class="mood-grid">
+      <button type="button" class="mood reveal"><div class="pup" data-mood="happy"></div><h3>Happy</h3><p>Every time you open the app</p></button>
+      <button type="button" class="mood reveal" data-burst="confetti"><div class="pup" data-mood="proud"></div><h3>Proud</h3><p>You just hit a new PR</p></button>
+      <button type="button" class="mood reveal" data-burst="confetti"><div class="pup" data-mood="cheering"></div><h3>Cheering</h3><p>Weekly goal: smashed</p></button>
+      <button type="button" class="mood reveal"><div class="pup" data-mood="curious"></div><h3>Curious</h3><p>Browsing new exercises</p></button>
+      <button type="button" class="mood reveal"><div class="pup" data-mood="sleepy"></div><h3>Sleepy</h3><p>Rest day. Well deserved.</p></button>
+      <button type="button" class="mood reveal"><div class="pup" data-mood="pleading"></div><h3>Missed you</h3><p>It's been a few days…</p></button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Made for the gym</span>
+      <h2>All the useful bits. None of the clutter.</h2>
+    </div>
+    <div class="gym-grid">
+      <div class="gym-card reveal"><div class="icon" style="background: var(--sky)">📴</div><h3>Works fully offline</h3><p>Basement gym, zero bars? Everything still works. Your workouts live on your phone.</p></div>
+      <div class="gym-card reveal"><div class="icon" style="background: var(--butter)">🧮</div><h3>Plate calculator</h3><p>Know exactly what to load on each side of the bar, no mental math between sets.</p></div>
+      <div class="gym-card reveal"><div class="icon" style="background: var(--success-fill)">⚖️</div><h3>Pounds or kilograms</h3><p>Train in whichever you like and switch any time.</p></div>
+      <div class="gym-card reveal"><div class="icon" style="background: var(--primary-fill)">🔎</div><h3>Smart search</h3><p>Type <code>ohp</code>, <code>tris</code> or a typo and still land on the right exercise.</p></div>
+      <div class="gym-card reveal"><div class="icon" style="background: var(--peach)">📋</div><h3>Templates</h3><p>Save your favourite routines and start them with one tap.</p></div>
+      <div class="gym-card reveal"><div class="icon" style="background: var(--pink)">📤</div><h3>Your data is yours</h3><p>Export every workout to CSV whenever you want. No lock-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="membership" style="padding-top: 0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free to use. Founding Dawg if you love it.</h2>
+      <p>Everything you need to train is free. Membership adds backup and sync.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Free</h3>
+        <div class="price">$0</div>
+        <p class="sub">On your phone, forever.</p>
+        <ul>
+          <li>Unlimited workouts and templates</li>
+          <li>Rest timer with Live Activity</li>
+          <li>PRs, charts and muscle map</li>
+          <li>Works fully offline</li>
+          <li>CSV export</li>
+        </ul>
+      </div>
+      <div class="plan plan-founding reveal">
+        <span class="badge">🐾 Founding Dawg</span>
+        <div class="pup plan-pup" data-mood="proud"></div>
+        <h3>Founding Dawg</h3>
+        <div class="price">$24.99<small> USD / year</small></div>
+        <p class="sub">Founding price, locked in for life.</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Back up every workout</li>
+          <li>Sync across your devices</li>
+          <li>Every future app in the family, included</li>
+          <li>Support an indie developer 💜</li>
+        </ul>
+      </div>
+    </div>
+    <p class="plan-note">Founding Dawg is an auto-renewing yearly subscription, billed through your Apple Account. Cancel any time in your App Store settings.</p>
+  </div>
+</section>
+
+<section class="final reveal">
+  <div class="pup" data-mood="cheering"></div>
+  <h2>Your pup is waiting.</h2>
+  <p>dawg is almost here. It's coming soon to the App Store for iPhone.</p>
+  <a class="btn btn-dark" href="/dawg/support/">Questions? Get in touch</a>
+</section>
+
 </main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav>
+      <a href="/dawg/">About dawg</a>
+      <a href="/dawg/privacy/">Privacy policy</a>
+      <a href="/dawg/support/">Support</a>
+      <a href="/">Made by Adel</a>
+    </nav>
+    <span class="copy">© 2026 Adel Akbar</span>
+  </div>
+</footer>
+
+<script src="/dawg/dawg.js"></script>
 </body>
 </html>
