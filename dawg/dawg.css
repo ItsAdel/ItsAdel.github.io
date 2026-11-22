@@ -146,6 +146,9 @@ a { color: var(--primary); }
   font-size: 14px;
 }
 
+a.pill { color: var(--ink); text-decoration: none; transition: transform 0.3s var(--spring); }
+a.pill:hover { transform: translateY(-2px); }
+
 .pill .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
@@ -730,6 +733,27 @@ a { color: var(--primary); }
 
 .faq details[open] summary::after { transform: rotate(45deg); background: var(--primary-fill); }
 .faq details p { margin: 0; padding: 0 22px 20px; color: var(--muted); }
+
+.release {
+  margin: 0 0 28px;
+  padding: 28px 28px 14px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.release-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.release-head h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+.release-tag, .release-date { padding: 4px 12px; border-radius: 999px; font-size: 14px; font-weight: 700; }
+.release-tag { background: var(--butter); color: var(--ink); }
+.release-date { background: var(--surface-elev); color: var(--muted); }
+.release-lede { margin: 12px 0 4px; color: var(--muted) !important; font-size: 17px; }
+.release h3 { margin: 26px 0 8px; font-size: 18px; font-weight: 800; }
+
+@media (max-width: 560px) {
+  .release { padding: 22px 18px 8px; border-radius: 22px; }
+}
 
 table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; display: block; overflow-x: auto; }
 th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
